@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<!-- 
+  Some of the canvas codes are derived from:
+  https://www.codingnepalweb.com/build-drawing-app-html-canvas-javascript/
+  However all the files have undergone many edits.
+
+  Thank's to codingnepal[youtube.com/codingnepal] for the free codes.
+  Pouya Hezaveh; November 16, 2023
+-->
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Drawing App JavaScript | CodingNepal</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -14,11 +21,11 @@
         <div class="row">
           <ul class="options">
             <li class="option active tool" id="brush">
-              <img src="icons/brush.svg" alt="">
+              <img src="icons/brush.svg" alt="" />
               <span>Brush</span>
             </li>
             <li class="option">
-              <input type="range" id="size-slider" min="1" max="30" value="5">
+              <input type="range" id="size-slider" min="1" max="30" value="5" />
             </li>
           </ul>
         </div>
@@ -31,6 +38,5 @@
         <canvas></canvas>
       </section>
     </div>
-    
   </body>
 </html>

@@ -58,6 +58,7 @@ saveImg.addEventListener("click", () => {
     link.href = canvas.toDataURL(); // passing canvasData as link href value
     link.click(); // clicking link to download image
     //! inja bayad dokme save ro dorost koni
+    link.
 });
 
 canvas.addEventListener("mousedown", startDraw);
