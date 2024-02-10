@@ -2,4 +2,4 @@
 
 using DigitRecognition
 const UserApp = DigitRecognition
-DigitRecognition.main()
+UserApp.main()
