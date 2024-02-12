@@ -1,1 +1,1 @@
-"/home/pouya/Julia/julia-1.9.4/bin/julia" --color=yes --depwarn=no --project=@. -q -- "%~dp0..\bootstrap.jl" -r %*
+"/home/pouya/Julia/julia-1.10.0/bin/julia" --color=yes --depwarn=no --project=@. -q -- "%~dp0..\bootstrap.jl" -r %*
