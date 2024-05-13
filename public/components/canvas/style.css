@@ -20,8 +20,8 @@ section {
 
 .tools-board {
   width: 20vw;
-  min-width: 200px;
-  max-height: 200px;
+  min-width: 100px;
+  height: fit-content;
   padding: 20px 20px 0px;
   font-weight: bold;
 }
@@ -50,6 +50,7 @@ section {
 
 
 .buttons button {
+  transition: all 0.2s ease;
   width: 100%;
   color: #fff;
   border: none;
@@ -66,7 +67,6 @@ section {
 .buttons .clear-canvas {
   color: #565d63;
   border: 2px solid #6C757D;
-  transition: all 0.2s ease;
 }
 
 .clear-canvas:hover {
@@ -77,11 +77,25 @@ section {
 .buttons .save-img {
   background: #4A98F7;
   border: 1px solid #4A98F7;
+  margin-top: 25px;
 }
 
 .buttons .save-img:hover {
   background: #bf5188;
-  border: 1px solid #4A98F7;
+}
+
+
+.buttons .guess-digit {
+  background: #5c3c92;
+  border: 1px solid #6C757D;
+}
+
+.buttons .guess-digit:hover {
+  background: #bf5188;
+}
+
+.buttons .guess-digit:active {
+  background: #6d2d4d;
 }
 
 .drawing-board {
@@ -96,4 +110,26 @@ section {
   max-height: 90vh;
   width: 50vw;
   height: 50vw;
+}
+
+.eye-logo {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .eye-logo {
+    animation: eye-logo-spin infinite 60s linear;
+  }
+}
+
+@keyframes eye-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
