@@ -8,18 +8,17 @@
 <body>
   <div class="container">
     <section class="tools-board">
-      <div class="row">
-        <ul class="options">
-          <li>
-            <img class="eye-logo" src="icons/eye.png" />
-          </li>
-        </ul>
+      <div>
       </div>
-      <div class="row buttons">
-        <button class="guess-digit">Guess The Number</button>
-        <button class="clear-canvas">Clear Canvas</button>
+      <div class="buttons">
         <button class="save-img">Save As Image</button>
+        <button class="clear-canvas">Clear Canvas</button>
+        <button class="guess-button">Guess The Number</button>
       </div>
+      <eye-display class="eye-system">
+          <img class="eye-logo" src="icons/eye.png" />
+          <eye-output>?<eye-output/>
+      <eye-display/>
     </section>
     <section class="drawing-board">
       <canvas></canvas>

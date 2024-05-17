@@ -8,7 +8,7 @@ route("/") do
   serve_static_file("index.html")
 end
 
-route("/guess-digit", method=POST) do
+route("/see", method=POST) do
   println(postpayload(:drawing))
   if postpayload(:drawing) != Nothing
     # Call your digit recognition model here

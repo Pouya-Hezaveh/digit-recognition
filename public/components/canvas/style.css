@@ -3,7 +3,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: rgb(55, 29, 70)
+  background: rgb(55, 29, 70);
 }
 
 .container {
@@ -21,33 +21,15 @@ section {
 .tools-board {
   width: 20vw;
   min-width: 100px;
-  height: fit-content;
+  height: 100%;
   padding: 20px 20px 0px;
   font-weight: bold;
 }
 
-.row .options {
-  list-style: none;
-  margin: 10px 0 0 5px;
-}
-
-.row .options .option {
-  display: flex;
-  cursor: pointer;
-  align-items: center;
+.buttons {
+  margin-top: 10px;
   margin-bottom: 10px;
 }
-
-.option:is(:hover, .active) img {
-  filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(240deg) brightness(100%) contrast(60%);
-}
-
-.option :where(span, label) {
-  color: rgb(62, 56, 135);
-  cursor: pointer;
-  padding-left: 10px;
-}
-
 
 .buttons button {
   transition: all 0.2s ease;
@@ -76,25 +58,24 @@ section {
 
 .buttons .save-img {
   background: #4A98F7;
-  border: 1px solid #4A98F7;
-  margin-top: 25px;
+  border: 2px solid #4A98F7;
 }
 
 .buttons .save-img:hover {
   background: #bf5188;
 }
 
-
-.buttons .guess-digit {
+.buttons .guess-button {
   background: #5c3c92;
-  border: 1px solid #6C757D;
+  border: 2px solid #5c3c92;
+  margin-top: 20px;
 }
 
-.buttons .guess-digit:hover {
+.buttons .guess-button:hover {
   background: #bf5188;
 }
 
-.buttons .guess-digit:active {
+.buttons .guess-button:active {
   background: #6d2d4d;
 }
 
@@ -113,7 +94,28 @@ section {
 }
 
 .eye-logo {
-  object-fit: contain;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  justify-content: center;
+}
+
+.eye-logo:hover {
+  cursor: pointer;
+}
+
+eye-output {
+  height: 100%;
+  display: none;
+  color: #5c3c92;
+  font-size: 20vw;
+  justify-content: center;
+}
+
+eye-display {
+  height: 500px;
+  width: 500px;
   width: 100%;
   height: 100%;
 }

@@ -1,15 +1,16 @@
 const canvas = document.querySelector("canvas"),
   clearCanvas = document.querySelector(".clear-canvas"),
   saveImg = document.querySelector(".save-img"),
-  guessDigit = document.querySelector(".guess-digit"),
+  guessButton = document.querySelector(".guess-button"),
   eyeLogo = document.querySelector(".eye-logo"),
+  eyeOutput = document.querySelector("eye-output"),
   ctx = canvas.getContext("2d");
 
 // global variables with default value
 let prevMouseX, prevMouseY, snapshot,
   isDrawing = false,
   brushWidth = 10,
-  selectedColor = "#000"
+  selectedColor = "#000";
 
 const setCanvasBackground = () => {
   // setting canvas width/height.. offsetwidth/height returns viewable width/height of an element
@@ -55,26 +56,45 @@ saveImg.addEventListener("click", () => {
   link.download = `${Date.now()}.jpg`; // passing current date as link download value
   link.href = canvas.toDataURL(); // passing canvasData as link href value
   link.click(); // clicking link to download image
-  //! inja bayad dokme save ro dorost koni
-  //? link.
 });
 
-guessDigit.addEventListener('click', () => {
+guessButton.addEventListener('click', see);
+eyeLogo.addEventListener('click', see);
+
+function see() {
   const drawing = canvas.toDataURL('image/jpeg');
   const formData = new FormData();
   formData.append('drawing', drawing);
 
-  fetch("/guess-digit", {
+  fetch("/see", {
     method: 'POST',
     mode: "no-cors",
     body: formData
   })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => {
+      console.log(data); eyeOutput.textContent = data.msg
+    })
+    .then(showEyeOutput)
     .catch(error => {
       console.error('Error:', error);
     });
-});
+};
+
+const showEyeOutput = () => {
+  if (eyeOutput.textContent !== null) {
+    eyeLogo.style.display = 'none';
+    eyeOutput.style.display = 'flex';
+    guessButton.style.display = 'none';
+
+    // After 3 seconds, restore the previous state.
+    setTimeout(() => {
+      eyeLogo.style.display = 'flex';
+      eyeOutput.style.display = 'none';
+      guessButton.style.display = 'inline';
+    }, 3000);
+  }
+};
 
 canvas.addEventListener("mousedown", startDraw);
 canvas.addEventListener("mousemove", drawing);
