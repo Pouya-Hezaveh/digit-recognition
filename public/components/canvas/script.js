@@ -1,7 +1,6 @@
 const canvas = document.querySelector("canvas"),
   clearCanvas = document.querySelector(".clear-canvas"),
   saveImg = document.querySelector(".save-img"),
-  guessButton = document.querySelector(".guess-button"),
   eyeLogo = document.querySelector(".eye-logo"),
   eyeOutput = document.querySelector("eye-output"),
   ctx = canvas.getContext("2d");
@@ -58,10 +57,7 @@ saveImg.addEventListener("click", () => {
   link.click(); // clicking link to download image
 });
 
-guessButton.addEventListener('click', see);
-eyeLogo.addEventListener('click', see);
-
-function see() {
+eyeLogo.addEventListener('click', () => {
   const drawing = canvas.toDataURL('image/jpeg');
   const formData = new FormData();
   formData.append('drawing', drawing);
@@ -79,19 +75,17 @@ function see() {
     .catch(error => {
       console.error('Error:', error);
     });
-};
+});
 
 const showEyeOutput = () => {
   if (eyeOutput.textContent !== null) {
     eyeLogo.style.display = 'none';
     eyeOutput.style.display = 'flex';
-    guessButton.style.display = 'none';
 
     // After 3 seconds, restore the previous state.
     setTimeout(() => {
       eyeLogo.style.display = 'flex';
       eyeOutput.style.display = 'none';
-      guessButton.style.display = 'inline';
     }, 3000);
   }
 };
