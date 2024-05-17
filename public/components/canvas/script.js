@@ -58,6 +58,7 @@ saveImg.addEventListener("click", () => {
 });
 
 eyeLogo.addEventListener('click', () => {
+  eyeLogo.style.animation = 'eye-logo-spin infinite 0.5s linear';
   const drawing = canvas.toDataURL('image/jpeg');
   const formData = new FormData();
   formData.append('drawing', drawing);
@@ -86,6 +87,7 @@ const showEyeOutput = () => {
     setTimeout(() => {
       eyeLogo.style.display = 'flex';
       eyeOutput.style.display = 'none';
+      eyeLogo.style.animation = 'eye-logo-spin infinite 60s linear';
     }, 3000);
   }
 };
