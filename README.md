@@ -1,3 +1,5 @@
+# NOTE: This project is not yet complete...
+
 # digit-recognition
 
 A neural network (from SCRATCH!!!) that gets a handwritten digit as an input and then outputs the corresponding digit character.
@@ -16,4 +18,4 @@ The official Genie MVC framework documentation: <https://learn.genieframework.co
 
 A part of the canvas codes are derived from: <https://www.codingnepalweb.com/build-drawing-app-html-canvas-javascript/> However the codes have undergone many edits.
 
-And... do you know why that purple eye is so beautiful? Because I drew it myself :D
+And... Do you know what makes that purple eye so special? That I drew it myself :D
