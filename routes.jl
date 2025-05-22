@@ -1,4 +1,5 @@
 using Genie.Router, Genie.Renderer.Html, Genie.Requests
+include("src/Brain.jl")
 
 function f(x)
   println("Done!")
@@ -9,10 +10,12 @@ route("/") do
 end
 
 route("/see", method=POST) do
-  println(postpayload(:drawing))
-  if postpayload(:drawing) != Nothing
-    # Call your digit recognition model here
-    predicted_digit = 5
+  img = postpayload(:drawing)
+  if img != Nothing
+    # Calling digit recognition function
+    println(img[1])
+    predicted_digit = Brain.detectNumber(img);
+    #predicted_digit = Brain.detectNumber(img)
     return "{\"msg\": \"$predicted_digit\"}"
   else
     return "{\"msg\": \"*** No image under drawing key uploaded.\"}"

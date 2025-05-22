@@ -70,7 +70,8 @@ eyeLogo.addEventListener('click', () => {
   })
     .then(response => response.json())
     .then(data => {
-      console.log(data); eyeOutput.textContent = data.msg
+      console.log(data)
+      eyeOutput.textContent = data.msg
     })
     .then(showEyeOutput)
     .catch(error => {

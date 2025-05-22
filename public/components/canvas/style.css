@@ -21,7 +21,7 @@ section {
 .tools-board {
   width: 20vw;
   min-width: 100px;
-  padding: 20px 20px 0px;
+  padding: 20px 20px;
   font-weight: bold;
 }
 
@@ -33,7 +33,6 @@ section {
   outline: none;
   padding: 11px 0;
   font-size: 0.9rem;
-  margin-bottom: 20px;
   margin-bottom: 20px;
   font-weight: bold;
   background: none;
@@ -67,15 +66,10 @@ section {
 .drawing-board {
   flex: auto;
   overflow: auto;
-  width: 60vw;
-  height: 60vw;
-  min-width: 200px;
-  min-height: 200px;
-  max-width: 90vh;
-  max-height: 90vh;
 }
 
 .drawing-board canvas {
+  cursor: url(icons/brush.svg), auto;
   width: 60vw;
   height: 60vw;
   min-width: 200px;
@@ -93,9 +87,11 @@ section {
 
 .eye-logo:hover {
   cursor: pointer;
+  justify-self: center;
 }
 
 .eye-logo:active {
+  cursor: grab;
   width: 95%;
 }
 
