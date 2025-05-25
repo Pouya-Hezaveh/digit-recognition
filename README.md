@@ -3,15 +3,22 @@
 # 👁️ digit-recognition
 
 A neural network (from SCRATCH!) that gets a handwritten digit as an input and then outputs the corresponding digit character.  
-Just for fun! 🧑‍🎤️
+Just for fun! 🧑🏻‍🎤
 
 ## Features
 
-Main Language: 🔴️🟢️🟣️Julia!
++ Programming Languages:
+  + Server side:
+    + 🔴️🟢️🟣️Julia! (The Main Language)
+    + 📘️C++ (To use some libraries)
+  + Client side:
+    + 🟨️JavaScript
 
-Framework: 🧞️Genie
++ Framework:
+  + 🧞️Genie
 
-Database: 🪶️SQLite
++ Database:
+  + 🪶️SQLite
 
 ## Sources
 
@@ -22,4 +29,4 @@ Database: 🪶️SQLite
     The basis of the canvas codes is derived from [Coding Nepal](https://www.codingnepalweb.com/build-drawing-app-html-canvas-javascript/); However I extensively modified it.
 
 **And...**  
-Do you know what makes that amusing purple eye so special?😋️ That I drew it myself! 😎️
+Do you know what makes that amusing purple eye so special?💦️ That I drew it myself! 😎️

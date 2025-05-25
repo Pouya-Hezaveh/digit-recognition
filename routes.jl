@@ -1,5 +1,5 @@
-using Genie.Router, Genie.Renderer.Html, Genie.Requests
-include("src/Brain.jl")
+using Genie.Router, Genie.Renderer.Html, Genie.Requests, Base64
+include("src/Sense.jl")
 
 function f(x)
   println("Done!")
@@ -10,12 +10,14 @@ route("/") do
 end
 
 route("/see", method=POST) do
-  img = postpayload(:drawing)
+  img = base64decode(postpayload(:drawing))
+
+  #println(postpayload(:drawing))
+  #println(base64decode(postpayload(:drawing)))
+  
   if img != Nothing
     # Calling digit recognition function
-    println(img[1])
-    predicted_digit = Brain.detectNumber(img);
-    #predicted_digit = Brain.detectNumber(img)
+    predicted_digit = Sense.seeDigit(img);
     return "{\"msg\": \"$predicted_digit\"}"
   else
     return "{\"msg\": \"*** No image under drawing key uploaded.\"}"

@@ -47,3 +47,6 @@ db/*.sqlite
 
 # environment variables file
 .env
+
+# handwritten samples
+samples

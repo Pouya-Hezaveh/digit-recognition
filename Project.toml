@@ -4,6 +4,7 @@ authors = ["Pouya-Hezaveh <hezavehir@gmail.com>"]
 version = "0.1.0"
 
 [deps]
+Base64 = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
 Genie = "c43c736e-a2d1-11e8-161f-af95117fbd1e"
 ImageCore = "a09fc81d-aa75-5fe9-8630-4744c3626534"
@@ -14,5 +15,6 @@ SearchLightSQLite = "21a827c4-482a-11ea-3a19-4d2243a4a2c5"
 TimeZones = "f269a46b-ccf7-5d73-abea-4c690281aa53"
 
 [compat]
+Base64 = "1.11.0"
 ImageCore = "0.10.5"
 TimeZones = "1.21.3"

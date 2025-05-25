@@ -1,9 +1,10 @@
 module Brain
 
-using ImageCore
-
-function detectNumber(drawing)
-    return '?'
+function detectNumber(pixels)
+	
+	return '?'
 end
+
+
 
 end
