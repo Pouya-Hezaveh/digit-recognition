@@ -48,5 +48,5 @@ db/*.sqlite
 # environment variables file
 .env
 
-# handwritten samples
+# training samples for ai
 samples

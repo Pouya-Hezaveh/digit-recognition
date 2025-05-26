@@ -12,6 +12,14 @@ end
 route("/see", method=POST) do
   img = base64decode(postpayload(:drawing))
 
+  test_case =  [
+    [[101,100,100],[102,100,100]],
+    [[103,100,100],[104,100,100]],
+    [[105,100,100],[106,100,100]],
+    [[107,100,100],[108,100,100]]
+    ]
+  println(Sense.convertRGBtoGrayscale(test_case))
+
   #println(postpayload(:drawing))
   #println(base64decode(postpayload(:drawing)))
   
